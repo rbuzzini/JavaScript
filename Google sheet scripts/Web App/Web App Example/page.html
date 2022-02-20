@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <base target="_top">
+  </head>
+  <body>
+    
+    <h1>Hello</h1>
+    <label>Name:</label><input type="text" id="username">
+    <button id="btn">Run It!</button>
+    
+    <script>
+    
+      document.getElementById("btn").addEventListener("click", doStuff);
+      
+      function doStuff(){
+          var uname = document.getElementById("username").value;
+      
+          google.script.run.userClicked(uname);
+          document.getElementById("username").value="";
+      }
+    
+    </script>
+    </body>
+</html>
+
+
+// References: https://www.youtube.com/watch?v=RRQvySxaCW0&list=PLv9Pf9aNgemt82hBENyneRyHnD-zORB3l&index=1
