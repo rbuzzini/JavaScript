@@ -1,0 +1,19 @@
+<script>
+    
+    document.getElementById("btn").addEventListener("click", doStuff);
+    
+    function doStuff(){
+
+        var userInfo = {};   // object that contains all info we will insert in the app
+
+        userInfo.firstName = document.getElementById("fname").value;
+        userInfo.lastName = document.getElementById("lname").value;
+        userInfo.app = document.getElementById("app").value;
+    
+        google.script.run.userClicked(userInfo);
+        document.getElementById("fname").value="";   // clear previous insertion
+        document.getElementById("lname").value="";
+        document.getElementById("app").value="";
+    }
+  
+  </script>

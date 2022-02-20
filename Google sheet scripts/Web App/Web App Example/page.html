@@ -2,27 +2,30 @@
 <html>
   <head>
     <base target="_top">
+    <?!= include("page-css"); ?>   <!-- line to include style in page-css file -->
   </head>
   <body>
     
     <h1>Hello</h1>
-    <label>Name:</label><input type="text" id="username">
-    <button id="btn">Run It!</button>
-    
-    <script>
-    
-      document.getElementById("btn").addEventListener("click", doStuff);
-      
-      function doStuff(){
-          var uname = document.getElementById("username").value;
-      
-          google.script.run.userClicked(uname);
-          document.getElementById("username").value="";
-      }
-    
-    </script>
+    <div class="form_row">
+        <label>First Name:</label><input type="text" id="fname">
+    </div>
+    <div class="form_row">
+        <label>Last Name:</label><input type="text" id="lname">
+    </div>
+    <div class="form_row">
+        <label>Application:</label>
+        <select id="app">
+          <option>Google Sheets</option>
+          <option>Excel</option>
+          <option>Numbers</option>
+        </select>
+    </div>
+    <div class="form_row">
+        <button id="btn">Run It!</button>
+    </div>
+
+    <?!= include("page-js"); ?>   <!-- line to include js script in page-js file -->
+
     </body>
 </html>
-
-
-// References: https://www.youtube.com/watch?v=RRQvySxaCW0&list=PLv9Pf9aNgemt82hBENyneRyHnD-zORB3l&index=1
