@@ -49,7 +49,8 @@ function move_file() {
   )
 
 
-  // Ora bisogna iterare nelle liste e passare quando lista_check=true, quando lista_check=false ...
+  // now we have to iterate through the lists.  When lista_check=true then, 
+  // when lista_check=false ...
   
 
   ss_data.map(
